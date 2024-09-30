@@ -2,12 +2,12 @@
 
 ### 👥 팀원 소개
 - 최가의 : Design, iOS
-- 최종현 : Server
-- 홍향미 : Server, Infra
+- 최종현 : Server, RDS
+- 홍향미 : Server, Lightsail, S3, DNS
 
 ## ⏰ 개발기간
-<details> 
-<summary> 23.06.23 ~ 24.03.04 </summary>
+ <details> 
+ <summary> 23.06.23 ~ 24.03.04 </summary>
  
 * 23.06.26 ~ 23.07.02
   * 기능 정리, ERD&UI 프로토타입 생성
@@ -26,18 +26,19 @@
 
 * 2024.09 ~ ing
   * 디자인 디벨롭 및 MVVM 패턴으로 변경 진행 중
-  * -> 새로운 레포지토리에 생성 완료
-</details>
+  * → 별도 레포지토리 관리
+ </details>
 
 ## 🛠️ 개발 환경
 - Java 17, Spring Boot 3.1.1
-- SwiftUI, Swift 5.9, UIKit, Combine
-- MySQL, PostgreSQL
-- AWS - Lightsail, RDS, S3, Route 53, Cloudfront
+- SwiftUI, Swift 5.9, UIKit, Combine, Core Location, Alamofire
+- MySQL, PostgreSQL, FCM
+- AWS → Lightsail, RDS, S3, Route 53, Cloudfront
+- Device Management -> Device Token
 - GitHub, Notion, Discord, Slack, Figma
 
 ## 📝 주요 기능
-![---001_1](https://github.com/user-attachments/assets/add55808-75f0-4422-a482-974ee37d2936)
+![001](https://github.com/user-attachments/assets/55a377eb-8c16-401f-b76a-084724ff9319)
 
 - 하트 보내기
 
@@ -45,19 +46,23 @@
   
   → 하트는 익명/실명 선택하여 전송이 가능하며, 익명으로 전송할 경우 서로 하트를 눌러야 채팅방이 생성되며, 실명으로 전송할 경우 바로 채팅방이 생성됩니다.
 
+
 - 투표 보내기
 
- → 9개의 랜덤 카테고리 중 하나를 선택하여 주변 친구에게 항목에 대한 투표를 할 수 있습니다.
+  → 9개의 랜덤 카테고리 중 하나를 선택하여 주변 친구에게 항목에 대한 투표를 할 수 있습니다.
+
 
 - 채팅
 
- → 채팅은 24시간동안 유지되며, 기간 연장은 서로 원할 경우에만 가능합니다.
+  → 채팅은 24시간동안 유지되며, 기간 연장은 서로 원할 경우에만 가능합니다.
+
 
 - 마이페이지
 
- → 마이페이지 내 자신의 오늘의 하트 수, 총 받은 하트 수, 투표 항목 TOP3 확인이 가능합니다.
+  → 마이페이지 내 자신의 오늘의 하트 수, 총 받은 하트 수, 투표 항목 TOP3 확인이 가능합니다.
+
 
 - 신고 및 필터링 기능
-  1. 비속어 및 욕설은 내부에서 필터링하여 대체 텍스트(👼) 노출됩니다.
+  1. 비속어 및 욕설은 내부에서 필터링하여 대체 텍스트(👼)가 노출됩니다.
   2. 메시지 및 힌트를 작성할 수 있는 투표 기능 모두 사용자가 받았을 때 신고할 수 있는 버튼이 노출되며 신고 기능을 통해 패널티를 부여합니다.
   3. 주변 친구 목록의 차단 기능을 통해 주변 목록에 노출되지 않게 할 수 있습니다.
